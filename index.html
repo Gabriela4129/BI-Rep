@@ -129,17 +129,18 @@
     .circle-wrap {
       position: absolute;
       left: 70px;
-      top: 60px;
-      width: 420px;
-      height: 420px;
+      top: 70px;
+      width: 320px;
+      height: 320px;
+      z-index: 3;
     }
 
     .circle-accent {
       position: absolute;
-      left: -36px;
-      top: 145px;
-      width: 112px;
-      height: 112px;
+      left: -28px;
+      top: 110px;
+      width: 96px;
+      height: 96px;
       background: #f39a00;
       border-radius: 50%;
       box-shadow: 0 10px 24px rgba(0,0,0,0.18);
@@ -148,13 +149,13 @@
 
     .circle-image {
       position: absolute;
-      width: 390px;
-      height: 390px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       overflow: hidden;
       border: 4px solid rgba(255,255,255,0.82);
       box-shadow: 0 12px 30px rgba(0,0,0,0.20);
-      background: #7aa8d0;
+      background: #d9d9d9;
       z-index: 2;
     }
 
@@ -168,20 +169,19 @@
     /* Orange banner */
     .announcement {
       position: absolute;
-      left: 420px;
+      left: 320px;
       right: 36px;
-      top: 320px;
+      top: 285px;
       background: #f39a00;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      padding: 18px 24px;
+      padding: 16px 24px 16px 90px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    }
-
-    elevenlabs-convai {
-      display: block;
-      width: 100%;
+      z-index: 1;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
     }
 
     /* Floating contact icons */
@@ -207,6 +207,11 @@
       justify-content: center;
       font-size: 24px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    }
+
+    /* Let ElevenLabs manage its own launcher */
+    elevenlabs-convai {
+      display: block;
     }
 
     /* Footer */
@@ -244,21 +249,22 @@
         left: auto;
         right: auto;
         top: auto;
-        width: auto;
         margin: 0 auto 24px;
       }
 
       .circle-wrap {
-        width: 390px;
-        height: 390px;
+        width: 300px;
+        height: 300px;
+      }
+
+      .circle-image {
+        width: 300px;
+        height: 300px;
       }
 
       .announcement {
         max-width: 760px;
-      }
-
-      .widget-card {
-        max-width: 520px;
+        padding: 16px 20px;
       }
     }
 
@@ -291,32 +297,25 @@
       }
 
       .circle-wrap {
-        width: 280px;
-        height: 280px;
+        width: 240px;
+        height: 240px;
       }
 
       .circle-image {
-        width: 280px;
-        height: 280px;
+        width: 240px;
+        height: 240px;
       }
 
       .circle-accent {
-        width: 88px;
-        height: 88px;
-        left: -16px;
-        top: 96px;
-      }
-
-      .widget-card {
-        padding: 18px;
-      }
-
-      .widget-card h1 {
-        font-size: 22px;
+        width: 72px;
+        height: 72px;
+        left: -12px;
+        top: 84px;
       }
 
       .announcement {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.4;
         padding: 14px 16px;
       }
 
@@ -350,14 +349,14 @@
       <div class="circle-wrap">
         <div class="circle-accent"></div>
         <div class="circle-image">
-  <img src="toll.jpg" alt="Toll road" />
-</div>
+          <img src="toll.jpg" alt="Toll road" />
         </div>
       </div>
 
       <div class="announcement">
         SmartBilling assistant for tolling, invoices and account support
       </div>
+
     </div>
   </section>
 
@@ -371,12 +370,18 @@
     © 2026 BI SmartBilling Demo | Powered by Conversational AI
   </footer>
 
-<script
-    src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+  <!-- Keep the agent in the page -->
+  <elevenlabs-convai
+    agent-id="agent_0301kshmfw32f8sat8f8ye1c8yaq"
+    variant="compact"
+    dismissible="true">
+  </elevenlabs-convai>
+
+  <script
+    src="https://unpkg.com/@elevenlabs/convai-widget-embed%22"
     async
     type="text/javascript">
-</script>
- 
+  </script>
 
 </body>
 </html>
