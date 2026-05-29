@@ -179,43 +179,6 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
-    /* Widget card */
-    .widget-card {
-      position: absolute;
-      top: 118px;
-      left: 720px;
-      width: 420px;
-      background: rgba(255,255,255,0.97);
-      border-radius: 18px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.14);
-      padding: 24px;
-      z-index: 3;
-    }
-
-    .demo-badge {
-      display: inline-block;
-      background: #f39a00;
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 7px 12px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-
-    .widget-card h1 {
-      margin: 0 0 10px;
-      font-size: 28px;
-      color: #203a56;
-    }
-
-    .widget-card p {
-      margin: 0 0 18px;
-      font-size: 15px;
-      line-height: 1.5;
-      color: #5c6d7e;
-    }
-
     elevenlabs-convai {
       display: block;
       width: 100%;
@@ -276,8 +239,7 @@
       }
 
       .circle-wrap,
-      .announcement,
-      .widget-card {
+      .announcement {
         position: relative;
         left: auto;
         right: auto;
@@ -388,31 +350,14 @@
       <div class="circle-wrap">
         <div class="circle-accent"></div>
         <div class="circle-image">
-          <img
-            src="https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=900&q=80"
-            alt="Road infrastructure visual"
-          />
+            toll.jpg
+</div>
         </div>
       </div>
 
       <div class="announcement">
         SmartBilling assistant for tolling, invoices and account support
       </div>
-
-      <div class="widget-card">
-        <div class="demo-badge">DEMO EXPERIENCE</div>
-        <h1>BI SmartBilling Agent</h1>
-        <p>
-          Ask about invoices, toll box issues, account details, payments and support scenarios.
-        </p>
-
-      <elevenlabs-convai
-  agent-id="agent_0301kshmfw32f8sat8f8ye1c8yaq"
-  variant="expanded"
-  dismissible="true">
-</elevenlabs-convai>
-      </div>
-
     </div>
   </section>
 
